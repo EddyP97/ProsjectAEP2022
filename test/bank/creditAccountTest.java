@@ -24,6 +24,12 @@ public class creditAccountTest {
         assertEquals(5500, bankAccount.balance());
     }
 
+    @Test (expected = IllegalStateException.class)
+    public void depositOfNegativeAmountShouldNotBePossible() {
+        var bankAccount = new creditAccount(5000);
+        bankAccount.deposit(-500);
+    }
+
 
 
 }
