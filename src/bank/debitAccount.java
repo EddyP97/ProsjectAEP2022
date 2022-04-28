@@ -1,6 +1,6 @@
 package bank;
 
-//Understands a bank with a customers balance sheet
+//Understands a bank with a customers balance sheet of type debit
 public class debitAccount {
 
 
