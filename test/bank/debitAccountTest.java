@@ -12,6 +12,13 @@ public class debitAccountTest {
         assertEquals(0, bankAccount.balance());
     }
 
+    @Test
+    public void deposit500ShouldUpdateBalanceTo500() {
+        var bankAccount = new debitAccount();
+        bankAccount.deposit(500);
+        assertEquals(500, bankAccount.balance());
+    }
+
 
 
 }
