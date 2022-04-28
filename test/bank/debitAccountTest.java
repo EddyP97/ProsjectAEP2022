@@ -3,6 +3,7 @@ package bank;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class debitAccountTest {
 
@@ -37,6 +38,13 @@ public class debitAccountTest {
     public void notAbleToWithdrawMoreMoneyThanYouHave() {
         var bankAccount = new debitAccount();
         bankAccount.withdraw(600);
+    }
+
+    @Test
+    public void twoBankAccountsWithSameBalanceShouldBeDifferent() {
+        var bankAccount = new debitAccount();
+        var anotherBankAccount = new debitAccount();
+        assertNotEquals(bankAccount,anotherBankAccount);
     }
 
 
