@@ -22,6 +22,9 @@ public class debitAccount {
     }
 
     public void withdraw(int value) {
+        if (value > balance) {
+            throw new IllegalStateException("Can't withdraw more money than you have");
+        }
         balance -= value;
     }
 }

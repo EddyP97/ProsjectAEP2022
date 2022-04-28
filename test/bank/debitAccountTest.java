@@ -33,6 +33,12 @@ public class debitAccountTest {
         assertEquals(0,bankAccount.balance());
     }
 
+    @Test (expected = IllegalStateException.class)
+    public void notAbleToWithdrawMoreMoneyThanYouHave() {
+        var bankAccount = new debitAccount();
+        bankAccount.withdraw(600);
+    }
+
 
 
 }
