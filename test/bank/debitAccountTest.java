@@ -23,7 +23,14 @@ public class debitAccountTest {
     public void shouldNotBeAbleToDepositNegativeAmount() {
         var bankAccount = new debitAccount();
         bankAccount.deposit(-500);
+    }
 
+    @Test
+    public void withdrawing500AfterDepositing500ShouldGiveBalanceZero() {
+        var bankAccount = new debitAccount();
+        bankAccount.deposit(500);
+        bankAccount.withdraw(500);
+        assertEquals(0,bankAccount.balance());
     }
 
 

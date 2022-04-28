@@ -20,4 +20,8 @@ public class debitAccount {
         }
         balance +=value;
     }
+
+    public void withdraw(int value) {
+        balance -= value;
+    }
 }
