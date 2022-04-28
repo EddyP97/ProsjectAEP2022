@@ -1,8 +1,8 @@
 package bank;
 
 public class creditAccount {
-    private final int balance;
-    private int creditLimit;
+    private int balance;
+    private final int creditLimit;
 
     public creditAccount(int creditLimit) {
         if (creditLimit <= 0) {
@@ -14,5 +14,9 @@ public class creditAccount {
 
     public int balance() {
         return balance + creditLimit;
+    }
+
+    public void deposit(int value) {
+        balance += value;
     }
 }

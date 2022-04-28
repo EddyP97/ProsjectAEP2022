@@ -16,4 +16,14 @@ public class creditAccountTest {
     public void creditCannotZeroOrNegative() {
         var bankAccount = new creditAccount(0);
     }
+
+    @Test
+    public void depositOf500WithCreditLimit5000ShouldReturnBalanceOf5500() {
+        var bankAccount = new creditAccount(5000);
+        bankAccount.deposit(500);
+        assertEquals(5500, bankAccount.balance());
+    }
+
+
+
 }
