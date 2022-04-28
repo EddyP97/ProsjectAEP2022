@@ -15,6 +15,9 @@ public class debitAccount {
     }
 
     public void deposit(int value) {
+        if (value < 0) {
+            throw new IllegalArgumentException("Can't deposit negative amount");
+        }
         balance +=value;
     }
 }

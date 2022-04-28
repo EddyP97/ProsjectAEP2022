@@ -19,6 +19,13 @@ public class debitAccountTest {
         assertEquals(500, bankAccount.balance());
     }
 
+    @Test (expected = IllegalArgumentException.class)
+    public void shouldNotBeAbleToDepositNegativeAmount() {
+        var bankAccount = new debitAccount();
+        bankAccount.deposit(-500);
+
+    }
+
 
 
 }
